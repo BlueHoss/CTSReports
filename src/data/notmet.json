@@ -1,0 +1,42 @@
+{
+    "title": "Criteria NOT Met",
+    "status": {
+      "text": "CRITERIA NOT MET",
+      "icon": "check",
+           "class": "status-banner denied"
+    },
+    "summary": {
+      "title": "Participation Status: Critera Met",
+      "text": "This participant meets the Critera Met status for study participation. All eligibility criteria have been met and verified.",
+      "date": "November 10, 2024"
+    },
+    "flags": [
+      {
+        "text": "Critical: Not Eligible for Study - Previous study involvement disqualifies the participant.",
+        "type": "critical"
+      }
+    ],
+    "meta": [
+      {
+        "label": "Date",
+        "value": "November 8, 2024"
+      },
+      {
+        "label": "Site",
+        "value": "A-Shine"
+      },
+      {
+        "label": "Protocol",
+        "value": "NMRA-335140-303"
+      },
+      {
+        "label": "Subject Number",
+        "value": "000-000-0006"
+      }
+    ],
+    "subject": {
+      "initials": "BBB",
+      "yob": "2019 (5)",
+      "sex": "M"
+    }
+  }

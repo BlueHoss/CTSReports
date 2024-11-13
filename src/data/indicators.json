@@ -1,0 +1,617 @@
+{
+    "indicators": [
+      {
+        "id": "washout_violation_inactive",
+        "icon": "notmet",
+        "color": "status-banner denied",
+        "title": "Washout Violation (no longer active)",
+        "status": {
+          "title": "CRITERIA NOT MET",
+          "text": "ET/EOS found within range set on CTS Study",
+          "date": "November 10, 2024"
+        },
+        "flags": [
+          {
+            "color": "#dc3545",
+            "header": "Washout Violation: Completed 12-Oct-2024 (less than 30 days)"
+          }
+        ],
+        "protocol": [
+          {
+            "label": "Date",
+            "value": "November 8, 2024"
+          },
+          {
+            "label": "Site",
+            "value": "A-Shine"
+          },
+          {
+            "label": "Protocol",
+            "value": "NMRA-335140-303"
+          }
+        ],
+        "subject": [
+          {
+            "label": "Subject Number",
+            "value": "000-000-0002"
+          },
+          {
+            "label": "Initials",
+            "value": "BCB"
+          },
+          {
+            "label": "Year of Birth (age)",
+            "value": "2000 (24)"
+          },
+          {
+            "label": "Sex",
+            "value": "M"
+          }
+        ],
+        "match": {
+          "title": "Probable Matches",
+          "subtitle": "Identifiers matched closely enough that the odds are less than 1 in 10 million to occur by chance",
+          "matches": [
+            {
+              "initialVisit": "07-Nov-2024",
+              "indication": "Major Depression",
+              "lastStatus": "Approved",
+              "initials": "BBB",
+              "yob": "2000",
+              "age": "24",
+              "siteName": "A-Shine",
+              "siteZip": "312 00",
+              "sitePhone": "+420 777242101"
+            }
+          ]
+        }
+      },
+      {
+        "id": "washout_violation_active",
+        "icon": "notmet",
+        "color": "status-banner denied",
+        "title": "Washout Violation (still active)",
+        "status": {
+          "title": "CRITERIA NOT MET",
+          "text": "No closeout status for a previous CTS study",
+          "date": "November 08, 2024"
+        },
+        "flags": [
+          {
+            "color": "#dc3545",
+            "header": "Washout Violation: Active in MMDD Study"
+          }
+        ],
+        "protocol": [
+          {
+            "label": "Date",
+            "value": "November 8, 2024"
+          },
+          {
+            "label": "Site",
+            "value": "A-Shine"
+          },
+          {
+            "label": "Protocol",
+            "value": "NMRA-335140-303"
+          }
+        ],
+        "subject": [
+          {
+            "label": "Subject Number",
+            "value": "000-000-0002"
+          },
+          {
+            "label": "Initials",
+            "value": "BCB"
+          },
+          {
+            "label": "Year of Birth (age)",
+            "value": "2000 (24)"
+          },
+          {
+            "label": "Sex",
+            "value": "M"
+          }
+        ],
+        "match": {
+          "title": "Probable Matches",
+          "subtitle": "Identifiers matched closely enough that the odds are less than 1 in 10 million to occur by chance",
+          "matches": [
+            {
+              "initialVisit": "07-Nov-2024",
+              "indication": "Major Depression",
+              "lastStatus": "Approved",
+              "initials": "BBB",
+              "yob": "2000",
+              "age": "24",
+              "siteName": "A-Shine",
+              "siteZip": "312 00",
+              "sitePhone": "+420 777242101"
+            }
+          ]
+        }
+      },
+      {
+        "id": "same_compound",
+        "icon": "notmet",
+        "color": "status-banner denied",
+        "title": "Same Compound/Study ET/EOS",
+        "status": {
+          "title": "CRITERIA NOT MET",
+          "text": "Same IP Found in CTS Study Screen",
+          "date": "November 11, 2024"
+        },
+        "flags": [
+          {
+            "color": "#dc3545",
+            "header": "Same IP: ET 23-Jan-2022"
+          }
+        ],
+        "protocol": [
+          {
+            "label": "Date",
+            "value": "November 8, 2024"
+          },
+          {
+            "label": "Site",
+            "value": "A-Shine"
+          },
+          {
+            "label": "Protocol",
+            "value": "NMRA-335140-303"
+          }
+        ],
+        "subject": [
+          {
+            "label": "Subject Number",
+            "value": "000-000-0002"
+          },
+          {
+            "label": "Initials",
+            "value": "BCB"
+          },
+          {
+            "label": "Year of Birth (age)",
+            "value": "2000 (24)"
+          },
+          {
+            "label": "Sex",
+            "value": "M"
+          }
+        ],
+        "match": {
+          "title": "Probable Matches",
+          "subtitle": "Identifiers matched closely enough that the odds are less than 1 in 10 million to occur by chance",
+          "matches": [
+            {
+              "initialVisit": "07-Nov-2024",
+              "indication": "Major Depression",
+              "lastStatus": "Approved",
+              "initials": "BBB",
+              "yob": "2000",
+              "age": "24",
+              "siteName": "A-Shine",
+              "siteZip": "312 00",
+              "sitePhone": "+420 777242101"
+            }
+          ]
+        }
+      },
+      {
+        "id": "bmi_age_range",
+        "icon": "notmet",
+        "color": "status-banner denied",
+        "title": "BMI/Age Out of Range set on CTS Study Screen",
+        "status": {
+          "title": "CRITERIA NOT MET",
+          "text": "BMI of 270 does not meet requirements OR Age of 106 does not meet requirements",
+          "date": "November 11, 2024"
+        },
+        "flags": [
+          {
+            "color": "#dc3545",
+            "header": "BMI of 270 does not meet requirements."
+          }
+        ],
+        "protocol": [
+          {
+            "label": "Date",
+            "value": "November 8, 2024"
+          },
+          {
+            "label": "Site",
+            "value": "A-Shine"
+          },
+          {
+            "label": "Protocol",
+            "value": "NMRA-335140-303"
+          }
+        ],
+        "subject": [
+          {
+            "label": "Subject Number",
+            "value": "000-000-0002"
+          },
+          {
+            "label": "Initials",
+            "value": "BCB"
+          },
+          {
+            "label": "Year of Birth (age)",
+            "value": "2000 (24)"
+          },
+          {
+            "label": "Sex",
+            "value": "M"
+          }
+        ],
+        "match": {
+          "title": "Probable Matches",
+          "subtitle": "Identifiers matched closely enough that the odds are less than 1 in 10 million to occur by chance",
+          "matches": [
+            {
+              "initialVisit": "07-Nov-2024",
+              "indication": "Major Depression",
+              "lastStatus": "Approved",
+              "initials": "BBB",
+              "yob": "2000",
+              "age": "24",
+              "siteName": "A-Shine",
+              "siteZip": "312 00",
+              "sitePhone": "+420 777242101"
+            }
+          ]
+        }
+      },
+      {
+        "id": "same_study",
+        "icon": "investigate",
+        "color": "status-banner investigate",
+        "title": "Same Study (SF)",
+        "status": {
+          "title": "INVESTIGATION REQUIRED",
+          "text": "Same Study (SF)",
+          "date": "November 11, 2024"
+        },
+        "flags": [
+          {
+            "color": "#ffc107",
+            "header": "Same Study: SF 12-Oct-2024"
+          }
+        ],
+        "nextSteps": [
+          {
+            "id": "rescreening",
+            "text": "If your subject is rescreening, please ensure you have received approval from the Sponsor team before continuing."
+          }
+        ],
+        "protocol": [
+          {
+            "label": "Date",
+            "value": "November 8, 2024"
+          },
+          {
+            "label": "Site",
+            "value": "A-Shine"
+          },
+          {
+            "label": "Protocol",
+            "value": "NMRA-335140-303"
+          }
+        ],
+        "subject": [
+          {
+            "label": "Subject Number",
+            "value": "000-000-0002"
+          },
+          {
+            "label": "Initials",
+            "value": "BCB"
+          },
+          {
+            "label": "Year of Birth (age)",
+            "value": "2000 (24)"
+          },
+          {
+            "label": "Sex",
+            "value": "M"
+          }
+        ],
+        "match": {
+          "title": "Probable Matches",
+          "subtitle": "Identifiers matched closely enough that the odds are less than 1 in 10 million to occur by chance",
+          "matches": [
+            {
+              "initialVisit": "07-Nov-2024",
+              "indication": "Major Depression",
+              "lastStatus": "Approved",
+              "initials": "BBB",
+              "yob": "2000",
+              "age": "24",
+              "siteName": "A-Shine",
+              "siteZip": "312 00",
+              "sitePhone": "+420 777242101"
+            }
+          ]
+        }
+      },
+      {
+        "id": "differing_indications",
+        "icon": "investigate",
+        "color": "status-banner investigate",
+        "title": "Differing Indications in History",
+        "description": "Indications found in Exclusions section of Study Screen",
+        "status": {
+          "title": "INVESTIGATION REQUIRED",
+          "text": "Indications found in Exclusions section of Study Screen",
+          "date": "November 11, 2024"
+        },
+        "flags": [
+          {
+            "color": "#ffc107",
+            "header": "Indications Found: PS Depression, Anxiety, Schizophrenia"
+          }
+        ],
+        "nextSteps": [
+          {
+            "id": "diagnosis_check",
+            "text": "Please ensure your subject does not have a diagnosis that would exclude them from continuing. CTSdatabase will be in touch with protocol-specific violations."
+          }
+        ],
+        "protocol": [
+          {
+            "label": "Date",
+            "value": "November 8, 2024"
+          },
+          {
+            "label": "Site",
+            "value": "A-Shine"
+          },
+          {
+            "label": "Protocol",
+            "value": "NMRA-335140-303"
+          }
+        ],
+        "subject": [
+          {
+            "label": "Subject Number",
+            "value": "000-000-0002"
+          },
+          {
+            "label": "Initials",
+            "value": "BCB"
+          },
+          {
+            "label": "Year of Birth (age)",
+            "value": "2000 (24)"
+          },
+          {
+            "label": "Sex",
+            "value": "M"
+          }
+        ],
+        "match": {
+          "title": "Probable Matches",
+          "subtitle": "Identifiers matched closely enough that the odds are less than 1 in 10 million to occur by chance",
+          "matches": [
+            {
+              "initialVisit": "07-Nov-2024",
+              "indication": "Major Depression",
+              "lastStatus": "Approved",
+              "initials": "BBB",
+              "yob": "2000",
+              "age": "24",
+              "siteName": "A-Shine",
+              "siteZip": "312 00",
+              "sitePhone": "+420 777242101"
+            }
+          ]
+        }
+      },
+      {
+        "id": "prescreen_visits",
+        "icon": "investigate",
+        "color": "status-banner investigate",
+        "title": "Prescreen Visits to Investigate",
+        "status": {
+          "title": "INVESTIGATION REQUIRED",
+          "text": "Prescreen visits with no closeout status from different sites in last 2 years",
+          "date": "November 11, 2024"
+        },
+        "flags": [
+          {
+            "color": "#ffc107",
+            "header": "Prescreen Visits found that may violate washout, investigation pending"
+          }
+        ],
+        "nextSteps": [
+          {
+            "id": "washout_violation",
+            "text": "Subject may be violating washout criteria - CTSdatabase will report findings to you as soon as possible."
+          }
+        ],
+        "protocol": [
+          {
+            "label": "Date",
+            "value": "November 8, 2024"
+          },
+          {
+            "label": "Site",
+            "value": "A-Shine"
+          },
+          {
+            "label": "Protocol",
+            "value": "NMRA-335140-303"
+          }
+        ],
+        "subject": [
+          {
+            "label": "Subject Number",
+            "value": "000-000-0002"
+          },
+          {
+            "label": "Initials",
+            "value": "BCB"
+          },
+          {
+            "label": "Year of Birth (age)",
+            "value": "2000 (24)"
+          },
+          {
+            "label": "Sex",
+            "value": "M"
+          }
+        ],
+        "match": {
+          "title": "Probable Matches",
+          "subtitle": "Identifiers matched closely enough that the odds are less than 1 in 10 million to occur by chance",
+          "matches": [
+            {
+              "initialVisit": "07-Nov-2024",
+              "indication": "Major Depression",
+              "lastStatus": "Approved",
+              "initials": "BBB",
+              "yob": "2000",
+              "age": "24",
+              "siteName": "A-Shine",
+              "siteZip": "312 00",
+              "sitePhone": "+420 777242101"
+            }
+          ]
+        }
+      },
+      {
+        "id": "misreported_identifiers",
+        "icon": "investigate",
+        "color": "status-banner investigate",
+        "title": "Misreported Identifiers",
+        "status": {
+          "title": "INVESTIGATION REQUIRED",
+          "text": "Potentially misreported identifiers",
+          "date": "November 11, 2024"
+        },
+        "flags": [
+          {
+            "color": "#ffc107",
+            "header": "Potentially misreported identifiers: Last 4 of ID"
+          }
+        ],
+        "nextSteps": [
+          {
+            "id": "id_verification",
+            "text": "Please ensure your subject is not attempting to report a false last four of ID. If a data change must be made, please visit the Change Request tab of your sidebar."
+          }
+        ],
+        "protocol": [
+          {
+            "label": "Date",
+            "value": "November 8, 2024"
+          },
+          {
+            "label": "Site",
+            "value": "A-Shine"
+          },
+          {
+            "label": "Protocol",
+            "value": "NMRA-335140-303"
+          }
+        ],
+        "subject": [
+          {
+            "label": "Subject Number",
+            "value": "000-000-0002"
+          },
+          {
+            "label": "Initials",
+            "value": "BCB"
+          },
+          {
+            "label": "Year of Birth (age)",
+            "value": "2000 (24)"
+          },
+          {
+            "label": "Sex",
+            "value": "M"
+          }
+        ],
+        "match": {
+          "title": "Probable Matches",
+          "subtitle": "Identifiers matched closely enough that the odds are less than 1 in 10 million to occur by chance",
+          "matches": [
+            {
+              "initialVisit": "07-Nov-2024",
+              "indication": "Major Depression",
+              "lastStatus": "Approved",
+              "initials": "BBB",
+              "yob": "2000",
+              "age": "24",
+              "siteName": "A-Shine",
+              "siteZip": "312 00",
+              "sitePhone": "+420 777242101"
+            }
+          ]
+        }
+      },
+      {
+        "id": "no_match_found",
+        "icon": "met",
+        "color": "status-banner approved",
+        "title": "Participation Status: Criteria Met",
+        "status": {
+          "title": "CRITERIA MET",
+          "text": "This participant meets the Critera Met status for study participation. All eligibility criteria have been met and verified.",
+          "date": "November 10, 2024"
+        },
+        "protocol": [
+          {
+            "label": "Date",
+            "value": "November 8, 2024"
+          },
+          {
+            "label": "Site",
+            "value": "A-Shine"
+          },
+          {
+            "label": "Protocol",
+            "value": "NMRA-335140-303"
+          }
+        ],
+        "subject": [
+          {
+            "label": "Subject Number",
+            "value": "000-000-0002"
+          },
+          {
+            "label": "Initials",
+            "value": "BCB"
+          },
+          {
+            "label": "Year of Birth (age)",
+            "value": "2000 (24)"
+          },
+          {
+            "label": "Sex",
+            "value": "M"
+          }
+        ],
+        "match": {
+          "title": "Probable Matches",
+          "subtitle": "Identifiers matched closely enough that the odds are less than 1 in 10 million to occur by chance",
+          "matches": [
+            {
+              "initialVisit": "07-Nov-2024",
+              "indication": "Major Depression",
+              "lastStatus": "Approved",
+              "initials": "BBB",
+              "yob": "2000",
+              "age": "24",
+              "siteName": "A-Shine",
+              "siteZip": "312 00",
+              "sitePhone": "+420 777242101"
+            }
+          ]
+        }
+      }
+    ]
+  }
