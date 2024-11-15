@@ -47,12 +47,7 @@ td {
 		font-size: 9pt;
 		line-height: 1.2;
 	}
-
-	/* body {
-        margin: 0;
-        padding: 0;
-    } */
-
+	
 	    /* Chrome, Safari specific */
 		@page {
 			size: auto;

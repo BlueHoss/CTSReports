@@ -5,9 +5,10 @@
 		CircleX,
 		CheckSquareIcon,
 		FlagTriangleRight,
-		ArrowRight
+		ArrowLeft,
+		HeartPulse
 	} from 'lucide-svelte';
-	import data from '../data/indicators.json';
+	import data from '../../data/indicators.json';
 	import './app.report.css';
 
 	let activeIndicator: any = null;
@@ -73,10 +74,11 @@
 			<SquareCheck size={24} />
 		</button>
 		<a
-			href="/v2"
+			href="/"
 			class="justify-left flex items-center rounded-lg p-2 transition-colors duration-200 hover:bg-gray-200"
+			rel="external"
 		>
-			V2 <ArrowRight size={24} />
+			V1 <ArrowLeft size={24} />
 		</a>
 	</div>
 
