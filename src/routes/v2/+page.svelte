@@ -73,13 +73,6 @@
 		>
 			<SquareCheck size={24} />
 		</button>
-		<a
-			href="/"
-			class="justify-left flex items-center rounded-lg p-2 transition-colors duration-200 hover:bg-gray-200"
-			rel="external"
-		>
-			V1 <ArrowLeft size={24} />
-		</a>
 	</div>
 
 	<!-- Indicator selection when group is active -->
@@ -107,9 +100,15 @@
 {#if activeIndicator}
 	<div class="header">
 		<div class="justify-left flex items-center gap-2">
-			<img src="/logo.png" alt="CTSdatabase Logo" class="h-auto w-[100px]" />
-			<h1>CTSdatabase Match Report</h1>
+			<div class="justify-left flex items-center gap-2">
+				<img src="/logo.png" alt="CTSdatabase Logo" class="h-auto w-[100px]" />
+				<h1>CTSdatabase Match Report</h1>
+			</div>
+			<div class="justify-right flex items-center gap-2">
+				Indication: {activeIndicator.indication}
+			</div>
 		</div>
+
 		<!-- <div class="status-banner denied"> -->
 		<div class={activeIndicator.color}>
 			<div class="justify-left flex items-center gap-2">

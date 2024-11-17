@@ -1,0 +1,324 @@
+{
+  "indicators": [
+    {
+      "id": "washout_violation_active",
+      "icon": "notmet",
+      "color": "denied",
+      "title": "Washout Violation (still active)",
+      "status": "CRITERIA NOT MET",
+      "statusDescription": "No closeout status for a previous CTS study",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#dc3545",
+          "header": "Washout Violation: Active in MMDD Study"
+        }
+      ]
+    },
+    {
+      "id": "same_compound",
+      "icon": "notmet",
+      "color": "denied",
+      "title": "Same Compound/Study ET/EOS",
+      "status": "CRITERIA NOT MET",
+      "statusDescription": "Same IP Found in CTS Study Screen",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#dc3545",
+          "header": "Same IP: ET 23-Jan-2022"
+        }
+      ]
+    },
+    {
+      "id": "bmi_age_range",
+      "icon": "notmet",
+      "color": "denied",
+      "title": "BMI/Age Out of Range set on CTS Study Screen",
+      "status": "CRITERIA NOT MET",
+      "statusDescription": "BMI of 270 does not meet requirements OR Age of 106 does not meet requirements",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#dc3545",
+          "header": "BMI of 270 does not meet requirements."
+        },
+        {
+          "color": "#dc3545",
+          "header": "Age of 106 does not meet requirements."
+        }
+      ]
+    },
+    {
+      "id": "same_study",
+      "icon": "investigate",
+      "color": "investigate",
+      "title": "Same Study (SF)",
+      "status": "INVESTIGATION REQUIRED",
+      "statusDescription": "Same Study (SF)",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#ffc107",
+          "header": "Same Study: SF 12-Oct-2024"
+        }
+      ],
+      "nextSteps": [
+        {
+          "id": "rescreening",
+          "text": "If your subject is rescreening, please ensure you have received approval from the Sponsor team before continuing."
+        }
+      ]
+    },
+    {
+      "id": "differing_indications",
+      "icon": "investigate",
+      "color": "investigate",
+      "title": "Differing Indications in History",
+      "status": "INVESTIGATION REQUIRED",
+      "statusDescription": "Indications found in Exclusions section of Study Screen",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#ffc107",
+          "header": "Indications Found: PS Depression, Anxiety, Schizophrenia"
+        }
+      ],
+      "nextSteps": [
+        {
+          "id": "diagnosis_check",
+          "text": "Please ensure your subject does not have a diagnosis that would exclude them from continuing. CTSdatabase will be in touch with protocol-specific violations."
+        }
+      ]
+    },
+    {
+      "id": "prescreen_visits",
+      "icon": "investigate",
+      "color": "investigate",
+      "title": "Prescreen Visits to Investigate",
+      "status": "INVESTIGATION REQUIRED",
+      "statusDescription": "Prescreen visits with no closeout status from different sites in last 2 years",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#ffc107",
+          "header": "Prescreen Visits found that may violate washout, investigation pending"
+        }
+      ],
+      "nextSteps": [
+        {
+          "id": "washout_violation",
+          "text": "Subject may be violating washout criteria - CTSdatabase will report findings to you as soon as possible."
+        }
+      ]
+    },
+    {
+      "id": "misreported_identifiers",
+      "icon": "investigate",
+      "color": "investigate",
+      "title": "Misreported Identifiers",
+      "status": "INVESTIGATION REQUIRED",
+      "statusDescription": "Potentially misreported identifiers",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#ffc107",
+          "header": "Potentially misreported identifiers: Last 4 of ID"
+        }
+      ],
+      "nextSteps": [
+        {
+          "id": "id_verification",
+          "text": "Please ensure your subject is not attempting to report a false last four of ID. If a data change must be made, please visit the Change Request tab of your sidebar."
+        }
+      ]
+    },
+    {
+      "id": "no_match_found",
+      "icon": "met",
+      "color": "approved",
+      "title": "Participation Status: Criteria Met",
+      "status": "CRITERIA MET",
+      "statusDescription": "This participant meets the Critera Met status for study participation. All eligibility criteria have been met and verified.",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303"
+    },
+    {
+      "id": "pre_no_match_found",
+      "icon": "met",
+      "color": "approved",
+      "title": "Prescreen Status: Criteria Met",
+      "status": "CRITERIA MET",
+      "statusDescription": "This participant meets the Critera Met status for study participation. All eligibility criteria have been met and verified.",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303"
+    },
+    {
+      "id": "pre_misreported",
+      "icon": "investigate",
+      "color": "investigate",
+      "title": "Prescreen Status: Misreported Identifiers",
+      "status": "INVESTIGATION REQUIRED",
+      "statusDescription": "Potentially misreported identifiers",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#ffc107",
+          "header": "Potentially misreported identifiers: Last 4 of ID"
+        }
+      ],
+      "nextSteps": [
+        {
+          "id": "id_verification",
+          "text": "Please ensure your subject is not attempting to report a false last four of ID. If a data change must be made, please visit the Change Request tab of your sidebar."
+        }
+      ]
+    },
+    {
+      "id": "pre_prescreen_visits",
+      "icon": "investigate",
+      "color": "investigate",
+      "title": "Prescreen Status: Visits to Investigate",
+      "status": "INVESTIGATION REQUIRED",
+      "statusDescription": "Prescreen visits with no closeout status from different sites in last 2 years",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#ffc107",
+          "header": "Prescreen Visits found that may violate washout, investigation may be required."
+        }
+      ],
+      "nextSteps": [
+        {
+          "id": "washout_violation",
+          "text": "Subject may be violating washout criteria - We recommend you call all recent sites to confirm eligibility."
+        }
+      ]
+    },
+    {
+      "id": "pre_differing_indications",
+      "icon": "investigate",
+      "color": "investigate",
+      "title": "Prescreen Status: Differing Indications in History",
+      "status": "INVESTIGATION REQUIRED",
+      "statusDescription": "Indications found in Exclusions section of Study Screen",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#ffc107",
+          "header": "Indications Found: PS Depression, Anxiety, Schizophrenia"
+        }
+      ],
+      "nextSteps": [
+        {
+          "id": "diagnosis_check",
+          "text": "Please ensure your subject does not have a diagnosis that would exclude them from continuing. CTSdatabase will be in touch with protocol-specific violations."
+        }
+      ]
+    },
+    {
+      "id": "pre_washout_violation_active",
+      "icon": "notmet",
+      "color": "denied",
+      "title": "Prescreen Status: Washout Violation (still active)",
+      "status": "CRITERIA NOT MET",
+      "statusDescription": "No closeout status for a previous CTS study",
+      "subjectId": "000-000-0002",
+      "yearOfBirth": "2000",
+      "age": "24",
+      "sex": "M",
+      "initials": "BCB",
+      "visitDate": "11/8/2024",
+      "site": "A-Shine",
+      "protocol": "NMRA-335140-303",
+      "flags": [
+        {
+          "color": "#dc3545",
+          "header": "Washout Violation: Active in MMDD Study"
+        }
+      ]
+    }
+  ]
+}

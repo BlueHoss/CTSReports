@@ -72,12 +72,6 @@
 		>
 			<SquareCheck size={24} />
 		</button>
-		<a
-			href="/v2"
-			class="justify-left flex items-center rounded-lg p-2 transition-colors duration-200 hover:bg-gray-200"
-		>
-			V2 <ArrowRight size={24} />
-		</a>
 	</div>
 
 	<!-- Indicator selection when group is active -->
