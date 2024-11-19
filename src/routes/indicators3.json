@@ -3,7 +3,7 @@
     {
       "id": "washout_violation_active",
       "icon": "notmet",
-      "color": "denied",
+      "color": "bg-red-400",
       "title": "Washout Violation (still active)",
       "status": "CRITERIA NOT MET",
       "statusDescription": "No closeout status for a previous CTS study",
@@ -25,7 +25,7 @@
     {
       "id": "same_compound",
       "icon": "notmet",
-      "color": "denied",
+      "color": "bg-red-400",
       "title": "Same Compound/Study ET/EOS",
       "status": "CRITERIA NOT MET",
       "statusDescription": "Same IP Found in CTS Study Screen",
@@ -47,7 +47,7 @@
     {
       "id": "bmi_age_range",
       "icon": "notmet",
-      "color": "denied",
+      "color": "bg-red-400",
       "title": "BMI/Age Out of Range set on CTS Study Screen",
       "status": "CRITERIA NOT MET",
       "statusDescription": "BMI of 270 does not meet requirements OR Age of 106 does not meet requirements",
@@ -73,7 +73,7 @@
     {
       "id": "same_study",
       "icon": "investigate",
-      "color": "investigate",
+      "color": "bg-yellow-400",
       "title": "Same Study (SF)",
       "status": "INVESTIGATION REQUIRED",
       "statusDescription": "Same Study (SF)",
@@ -101,7 +101,7 @@
     {
       "id": "differing_indications",
       "icon": "investigate",
-      "color": "investigate",
+      "color": "bg-yellow-400",
       "title": "Differing Indications in History",
       "status": "INVESTIGATION REQUIRED",
       "statusDescription": "Indications found in Exclusions section of Study Screen",
@@ -129,7 +129,7 @@
     {
       "id": "prescreen_visits",
       "icon": "investigate",
-      "color": "investigate",
+      "color": "bg-yellow-400",
       "title": "Prescreen Visits to Investigate",
       "status": "INVESTIGATION REQUIRED",
       "statusDescription": "Prescreen visits with no closeout status from different sites in last 2 years",
@@ -157,7 +157,7 @@
     {
       "id": "misreported_identifiers",
       "icon": "investigate",
-      "color": "investigate",
+      "color": "bg-yellow-400",
       "title": "Misreported Identifiers",
       "status": "INVESTIGATION REQUIRED",
       "statusDescription": "Potentially misreported identifiers",
@@ -185,7 +185,7 @@
     {
       "id": "no_match_found",
       "icon": "met",
-      "color": "approved",
+     "color": "bg-green-400",
       "title": "Participation Status: Criteria Met",
       "status": "CRITERIA MET",
       "statusDescription": "This participant meets the Critera Met status for study participation. All eligibility criteria have been met and verified.",
@@ -201,7 +201,7 @@
     {
       "id": "pre_no_match_found",
       "icon": "met",
-      "color": "approved",
+     "color": "bg-green-400",
       "title": "Prescreen Status: Criteria Met",
       "status": "CRITERIA MET",
       "statusDescription": "This participant meets the Critera Met status for study participation. All eligibility criteria have been met and verified.",
@@ -217,7 +217,7 @@
     {
       "id": "pre_misreported",
       "icon": "investigate",
-      "color": "investigate",
+      "color": "bg-yellow-400",
       "title": "Prescreen Status: Misreported Identifiers",
       "status": "INVESTIGATION REQUIRED",
       "statusDescription": "Potentially misreported identifiers",
@@ -245,7 +245,7 @@
     {
       "id": "pre_prescreen_visits",
       "icon": "investigate",
-      "color": "investigate",
+      "color": "bg-yellow-400",
       "title": "Prescreen Status: Visits to Investigate",
       "status": "INVESTIGATION REQUIRED",
       "statusDescription": "Prescreen visits with no closeout status from different sites in last 2 years",
@@ -273,7 +273,7 @@
     {
       "id": "pre_differing_indications",
       "icon": "investigate",
-      "color": "investigate",
+      "color": "bg-yellow-400",
       "title": "Prescreen Status: Differing Indications in History",
       "status": "INVESTIGATION REQUIRED",
       "statusDescription": "Indications found in Exclusions section of Study Screen",
@@ -301,7 +301,7 @@
     {
       "id": "pre_washout_violation_active",
       "icon": "notmet",
-      "color": "denied",
+      "color": "bg-red-400",
       "title": "Prescreen Status: Washout Violation (still active)",
       "status": "CRITERIA NOT MET",
       "statusDescription": "No closeout status for a previous CTS study",

@@ -48,6 +48,7 @@
 	// Create a store to control dialog visibility
 	import { writable } from 'svelte/store';
 	import Button from '$lib/components/ui/button/button.svelte';
+	import V3parts from './_v3parts.svelte';
 	export const isDialogOpen = writable(false);
 
 	const openFailDialog = () => {
@@ -96,118 +97,36 @@
 			</div>
 		</div>
 
-		<div class="header-container">
-			<div class="left-content">
-				<div class="info-row">
-					<span class="label">Print Date:</span>
-					<span>{new Date().toLocaleDateString()}</span>
-				</div>
-				<div class="info-row">
-					<span class="label">Visit Date:</span>
-					<span>{indicator.visitDate}</span>
-				</div>
-			</div>
-			<div class="right-content">
-				<div class="info-row">
-					<span class="label">Site:</span>
-					<span>{indicator.site}</span>
-				</div>
-				<div class="info-row">
-					<span class="label">Protocol:</span>
-					<span>{indicator.protocol}</span>
-				</div>
-			</div>
-		</div>
-
-		<!-- Status Banner 2 -->
-		<div class="header-status">
-			<div class="status-banner {indicator.color}">
-				<div class="justify-left flex items-center gap-2">
-					<svelte:component this={iconMap[indicator.icon]} size={24} />
-					{indicator.status}
-				</div>
-			</div>
-
-			<div class="alert-description">
-				{#if indicator.icon === 'met'}
-					<span>The participant has met the protocol specifications.</span>
-				{:else}
-					<span>The following eligibility criteria have been flagged: </span>
-				{/if}
-			</div>
-			<div class="notes">
-				{#if indicator.flags && indicator.flags.length > 0}
-					<div class="space-y-2">
-						{#each indicator.flags as flag}
-							<div class="mt-5 flex items-center gap-2">
-								<FlagTriangleRight color={flag.color} />
-								<span>{flag.header}</span>
-							</div>
-						{/each}
-					</div>
-				{/if}
-
-				{#if indicator.nextSteps && indicator.nextSteps.length > 0}
-					<div class="mt-5">Next Steps:</div>
-					<div class="space-y-2">
-						{#each indicator.nextSteps as step}
-							<div class="flex items-start gap-2">
-								<CheckSquareIcon />
-								<p>{step.text}</p>
-							</div>
-						{/each}
-					</div>
-				{/if}
-			</div>
-		</div>
-
-		<h2 class="section text-gray-800">Subject Identifiers</h2>
-		<div class="report-meta">
-			<div class="meta-item">
-				<h3>Subject Number</h3>
-				<p>{indicator.subjectId}</p>
-			</div>
-			<div class="meta-item">
-				<h3>Initials</h3>
-				<p>{indicator.initials}</p>
-			</div>
-			<div class="meta-item">
-				<h3>Year of Birth (age)</h3>
-				<p>{indicator.yearOfBirth} ({indicator.age})</p>
-			</div>
-			<div class="meta-item">
-				<h3>Sex</h3>
-				<p>{indicator.sex}</p>
-			</div>
-		</div>
-		<br />
-		-------NEW---------
+		<!-- <V3parts {indicator} />
+		-------NEW--------- -->
 		<div class="grid grid-cols-2 gap-8 rounded-lg bg-gray-50 p-4">
 			<div class="space-y-2">
 				<div class="flex gap-4">
-					<span class="w-24 font-medium text-gray-600">Print Date:</span>
+					<span class="w-24 text-gray-600">Print Date:</span>
 					<span>11/19/2024</span>
 				</div>
 				<div class="flex gap-4">
-					<span class="w-24 font-medium text-gray-600">Visit Date:</span>
+					<span class="w-24 text-gray-600">Visit Date:</span>
 					<span>11/8/2024</span>
 				</div>
 			</div>
 			<div class="space-y-2">
 				<div class="flex gap-4">
-					<span class="w-24 font-medium text-gray-600">Site:</span>
+					<span class="w-24 text-gray-600">Site:</span>
 					<span>A-Shine</span>
 				</div>
 				<div class="flex gap-4">
-					<span class="w-24 font-medium text-gray-600">Protocol:</span>
+					<span class="w-24 text-gray-600">Protocol:</span>
 					<span>NMRA-335140-303</span>
 				</div>
 			</div>
 		</div>
 
 		<!-- Status Banner 2 -->
-		<div class="rounded-lg bg-white shadow-sm">
-			<div class="mb-6 flex items-center gap-2 rounded-md bg-red-500 p-4 text-white">
+		<div class="rounded-lg bg-white">
+			<div
+				class="mb-4 flex items-center gap-2 rounded-md {indicator.color} p-2 text-white print:rounded-md print:border-2 print:border-solid print:border-gray-400 print:bg-gray-400 print:text-gray-600"
+			>
 				<div class="justify-left flex items-center gap-2">
 					<svelte:component this={iconMap[indicator.icon]} size={24} />
 					{indicator.status}
@@ -216,16 +135,16 @@
 
 			<div class="alert-description">
 				{#if indicator.icon === 'met'}
-					<p class="mb-4 text-gray-700">The participant has met the protocol specifications.</p>
+					<p class="mb-4 text-gray-600">The participant has met the protocol specifications.</p>
 				{:else}
-					<p class="mb-4 text-gray-700">The following eligibility criteria have been flagged:</p>
+					<p class="mb-4 text-gray-600">The following eligibility criteria have been flagged:</p>
 				{/if}
 			</div>
 			<div class="notes">
 				{#if indicator.flags && indicator.flags.length > 0}
 					<div class="space-y-2">
 						{#each indicator.flags as flag}
-							<div class="mt-5 flex items-center gap-2">
+							<div class="mb-4 flex items-center text-gray-600">
 								<FlagTriangleRight color={flag.color} />
 								<span>{flag.header}</span>
 							</div>
@@ -234,10 +153,10 @@
 				{/if}
 
 				{#if indicator.nextSteps && indicator.nextSteps.length > 0}
-					<div class="mt-5">Next Steps:</div>
+					<div class="mt-5 text-gray-600">Next Steps:</div>
 					<div class="space-y-2">
 						{#each indicator.nextSteps as step}
-							<div class="flex items-start gap-2">
+							<div class="mb-4 flex items-start gap-2 text-gray-600">
 								<CheckSquareIcon />
 								<p>{step.text}</p>
 							</div>
@@ -250,19 +169,19 @@
 		<h2 class="mb-2 flex justify-center align-middle text-xl text-gray-800">Subject Identifiers</h2>
 		<div class="grid grid-cols-4 gap-2 rounded-lg">
 			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
-				<div class="font-medium text-gray-600">Subject Number</div>
+				<div class=" text-gray-600">Subject Number</div>
 				<div>4564564</div>
 			</div>
 			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
-				<div class="font-medium text-gray-600">Initials</div>
+				<div class=" text-gray-600">Initials</div>
 				<div>B-B</div>
 			</div>
 			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
-				<div class="font-medium text-gray-600">Year of Birth (age)</div>
+				<div class=" text-gray-600">Year of Birth (age)</div>
 				<div>{indicator.yearOfBirth} ({indicator.age})</div>
 			</div>
 			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
-				<div class="font-medium text-gray-600">Sex</div>
+				<div class=" text-gray-600">Sex</div>
 				<div>{indicator.sex}</div>
 			</div>
 		</div>
@@ -272,7 +191,7 @@
 		<img src="/probablematches.png" alt="Probable Matches" class="w-full" />
 
 		<!-- Footer -->
-		<div class="space-y-2 border-t border-gray-200 pt-4 text-sm text-gray-500">
+		<div class="space-y-2 border-t border-gray-200 pt-4 text-sm text-gray-600">
 			<p>PS = Prescreen, EOT = End Of Treatment</p>
 			<p>
 				If any of above information is incorrect, please contact us at
