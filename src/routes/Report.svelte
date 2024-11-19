@@ -122,7 +122,10 @@
 			</div>
 		</div>
 
-		<div class="bg-red-300 p-4 text-2xl text-black">this box should be red</div>
+		<div class="bg-red-300 p-4 text-2xl text-black">this box should always be red</div>
+		<div class={`${indicator.color} p-4 text-2xl text-black`}>
+			this box should dynamic based on report
+		</div>
 
 		<!-- Status Banner 2 -->
 		<div class="rounded-lg bg-white">
