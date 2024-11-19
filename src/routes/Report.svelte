@@ -10,6 +10,8 @@
 	} from 'lucide-svelte';
 	import ScreenFail from './_screenFail.svelte';
 
+	import StatusNotMet from './StatusNotMet.svelte';
+
 	const iconMap = {
 		met: SquareCheck,
 		notmet: CircleX,
@@ -49,6 +51,8 @@
 	import { writable } from 'svelte/store';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import V3parts from './_v3parts.svelte';
+	import StatusInvestigate from './StatusInvestigate.svelte';
+	import StatusMet from './StatusMet.svelte';
 	export const isDialogOpen = writable(false);
 
 	const openFailDialog = () => {
@@ -97,8 +101,6 @@
 			</div>
 		</div>
 
-		<!-- <V3parts {indicator} />
-		-------NEW--------- -->
 		<div class="grid grid-cols-2 gap-8 rounded-lg bg-gray-50 p-4">
 			<div class="space-y-2">
 				<div class="flex gap-4">
@@ -122,27 +124,21 @@
 			</div>
 		</div>
 
-		<div class="bg-red-300 p-4 text-2xl text-black">this box should always be red</div>
-		<div class={`${indicator.color} p-4 text-2xl text-black`}>
-			this box should dynamic based on report
-		</div>
-
 		<!-- Status Banner 2 -->
 		<div class="rounded-lg bg-white">
-			<div
-				class={`mb-4 flex items-center gap-2 rounded-md ${indicator.color} p-2 text-white print:rounded-md print:border-2 print:border-solid print:border-gray-400 print:bg-gray-400 print:text-gray-600`}
-			>
-				<div class="justify-left flex items-center gap-2">
-					<svelte:component this={iconMap[indicator.icon]} size={24} />
-					{indicator.status}
-				</div>
-			</div>
+			{#if indicator.icon === 'met'}
+				<StatusMet status={indicator.status} />
+			{:else if indicator.icon === 'notmet'}
+				<StatusNotMet status={indicator.status} />
+			{:else}
+				<StatusInvestigate status={indicator.status} />
+			{/if}
 
 			<div class="alert-description">
 				{#if indicator.icon === 'met'}
 					<p class="mb-4 text-gray-600">No flags found.</p>
 				{:else}
-					<p class="mb-4 text-gray-600">The following eligibility criteria have been flagged:</p>
+					<p class="mb-4 text-gray-600">The following eligibility criteria has been flagged:</p>
 				{/if}
 			</div>
 			<div class="notes">
