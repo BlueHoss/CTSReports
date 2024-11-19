@@ -47,10 +47,10 @@
 {#if indicator}
 	<div class="mx-auto max-w-[950px] space-y-6 p-8 text-gray-900">
 		<!-- Header -->
-		<div class="header-status flex items-center justify-between pb-4">
+		<!-- <div class="header-status flex items-center justify-between pb-4">
 			<div class="flex items-center gap-4">
 				<img src="/logo.png" alt="CTSdatabase Logo" class="h-auto w-[100px]" />
-				<h1 class="text-2xl font-semibold text-gray-800">Match Report</h1>
+				<h1 class="text-2xl font-semibold text-gray-800">CTS Database Match Report</h1>
 			</div>
 			<div class="text-sm text-gray-600">
 				<ul>
@@ -59,6 +59,38 @@
 					<li><strong>Site:</strong> {indicator.site}</li>
 					<li><strong>Protocol:</strong> {indicator.protocol}</li>
 				</ul>
+			</div>
+		</div> -->
+
+		<div class="logo-container">
+			<div class="text-content">
+				<h1 class="text-2xl font-semibold text-gray-800">CTSdatabase Match Report</h1>
+			</div>
+			<div class="image-content">
+				<img src="/logo.png" alt="CTSdatabase Logo" class="h-auto w-[100px]" />
+			</div>
+		</div>
+
+		<div class="header-container">
+			<div class="left-content">
+				<div class="info-row">
+					<span class="label">Print Date:</span>
+					<span>{new Date().toLocaleDateString()}</span>
+				</div>
+				<div class="info-row">
+					<span class="label">Visit Date:</span>
+					<span>{indicator.visitDate}</span>
+				</div>
+			</div>
+			<div class="right-content">
+				<div class="info-row">
+					<span class="label">Site:</span>
+					<span>{indicator.site}</span>
+				</div>
+				<div class="info-row">
+					<span class="label">Protocol:</span>
+					<span>{indicator.protocol}</span>
+				</div>
 			</div>
 		</div>
 
@@ -78,7 +110,8 @@
 					<span>The participant has met the protocol specifications.</span>
 				{:else}
 					<span
-						>An investigation is required regarding this participants elegibility for this study.
+						>An investigation into this subject's eligibility may be required due to the flags found
+						below:
 					</span>
 				{/if}
 			</div>
@@ -125,7 +158,7 @@
 			</div>
 		</div> -->
 
-		<h2 class="section">Subject</h2>
+		<h2 class="section">Subject Identifiers</h2>
 		<div class="report-meta">
 			<div class="meta-item">
 				<h3>Subject Number</h3>
@@ -168,6 +201,49 @@
 {/if}
 
 <style>
+	.logo-container {
+		display: flex;
+		align-items: center; /* Vertically centers the content */
+		justify-content: space-between; /* Pushes content to opposite ends */
+		gap: 20px; /* Adds space between text and image */
+		padding: 10px;
+	}
+
+	.text-content {
+		flex: 1; /* Allows text to take up available space */
+	}
+
+	.image-content img {
+		max-height: 100px; /* Adjust as needed */
+		width: auto;
+		object-fit: contain;
+	}
+
+	.header-container {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+	}
+
+	.left-content,
+	.right-content {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.info-row {
+		display: flex;
+		gap: 5px;
+	}
+
+	.label {
+		font-weight: bold;
+		color: #666;
+	}
+
 	.status-summary {
 		padding: 0.5rem;
 		margin: 0.5rem 0;
