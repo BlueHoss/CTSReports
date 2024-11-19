@@ -7,7 +7,7 @@
 		FlagTriangleRight,
 		ArrowRight
 	} from 'lucide-svelte';
-	import data from '../data/indicators.json';
+	import data from '../../data/indicators.json';
 	import './app.report.css';
 
 	let activeIndicator: any = null;
