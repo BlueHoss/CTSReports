@@ -125,7 +125,7 @@
 		<!-- Status Banner 2 -->
 		<div class="rounded-lg bg-white">
 			<div
-				class="mb-4 flex items-center gap-2 rounded-md {indicator.color} p-2 text-white print:rounded-md print:border-2 print:border-solid print:border-gray-400 print:bg-gray-400 print:text-gray-600"
+				class={`mb-4 flex items-center gap-2 rounded-md ${indicator.color} p-2 text-white print:rounded-md print:border-2 print:border-solid print:border-gray-400 print:bg-gray-400 print:text-gray-600`}
 			>
 				<div class="justify-left flex items-center gap-2">
 					<svelte:component this={iconMap[indicator.icon]} size={24} />
