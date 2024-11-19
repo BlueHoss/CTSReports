@@ -5,8 +5,10 @@
 		FlagTriangleRight,
 		ArrowRight,
 		SquareCheck,
-		CheckSquareIcon
+		CheckSquareIcon,
+		Printer
 	} from 'lucide-svelte';
+	import ScreenFail from './_screenFail.svelte';
 
 	const iconMap = {
 		met: SquareCheck,
@@ -42,10 +44,48 @@
 			}
 		];
 	};
+
+	// Create a store to control dialog visibility
+	import { writable } from 'svelte/store';
+	import Button from '$lib/components/ui/button/button.svelte';
+	export const isDialogOpen = writable(false);
+
+	const openFailDialog = () => {
+		isDialogOpen.set(true);
+	};
+
+	function print() {
+		if (indicator && indicator.icon === 'notmet') {
+			openFailDialog();
+		} else {
+			window.print();
+		}
+	}
+
+	function handleOnNoClicked() {
+		isDialogOpen.set(false);
+		setTimeout(() => window.print(), 100); // 300ms delay for dialog animation
+	}
+	function handleOnYesClicked() {
+		isDialogOpen.set(false);
+		setTimeout(() => window.print(), 100); // 300ms delay for dialog animation
+	}
 </script>
+
+<ScreenFail
+	onYes={handleOnYesClicked}
+	onNo={handleOnNoClicked}
+	open={$isDialogOpen}
+	onOpenChange={(open) => isDialogOpen.set(open)}
+/>
 
 {#if indicator}
 	<div class="mx-auto max-w-[950px] space-y-6 p-8 text-gray-900">
+		<div class="flex w-full justify-end print:hidden">
+			<Button on:click={() => print()} variant="outline"
+				><Printer class="mr-3" /> Print this report</Button
+			>
+		</div>
 		<!-- Header -->
 		<!-- <div class="header-status flex items-center justify-between pb-4">
 			<div class="flex items-center gap-4">
