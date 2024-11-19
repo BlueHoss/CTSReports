@@ -122,6 +122,8 @@
 			</div>
 		</div>
 
+		<div class="bg-red-300 p-4 text-2xl text-black">this box should be red</div>
+
 		<!-- Status Banner 2 -->
 		<div class="rounded-lg bg-white">
 			<div
@@ -135,7 +137,7 @@
 
 			<div class="alert-description">
 				{#if indicator.icon === 'met'}
-					<p class="mb-4 text-gray-600">The participant has met the protocol specifications.</p>
+					<p class="mb-4 text-gray-600">No flags found.</p>
 				{:else}
 					<p class="mb-4 text-gray-600">The following eligibility criteria have been flagged:</p>
 				{/if}
