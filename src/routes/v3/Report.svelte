@@ -104,20 +104,14 @@
 			</div>
 
 			<div class="alert-description">
-				{#if indicator.icon === 'notmet'}
-					<span>The participant has not met the protocol specifications.</span>
-				{:else if indicator.icon === 'met'}
+				{#if indicator.icon === 'met'}
 					<span>The participant has met the protocol specifications.</span>
 				{:else}
-					<span
-						>An investigation into this subject's eligibility may be required due to the flags found
-						below:
-					</span>
+					<span>The following eligibility criteria have been flagged: </span>
 				{/if}
 			</div>
 			<div class="notes">
 				{#if indicator.flags && indicator.flags.length > 0}
-					<span> The following elegibility criteria has been flagged:</span>
 					<div class="space-y-2">
 						{#each indicator.flags as flag}
 							<div class="mt-5 flex items-center gap-2">
