@@ -86,21 +86,6 @@
 				><Printer class="mr-3" /> Print this report</Button
 			>
 		</div>
-		<!-- Header -->
-		<!-- <div class="header-status flex items-center justify-between pb-4">
-			<div class="flex items-center gap-4">
-				<img src="/logo.png" alt="CTSdatabase Logo" class="h-auto w-[100px]" />
-				<h1 class="text-2xl font-semibold text-gray-800">CTS Database Match Report</h1>
-			</div>
-			<div class="text-sm text-gray-600">
-				<ul>
-					<li><strong>Print Date:</strong> {new Date().toLocaleDateString()}</li>
-					<li><strong>Visit Date:</strong> {indicator.visitDate}</li>
-					<li><strong>Site:</strong> {indicator.site}</li>
-					<li><strong>Protocol:</strong> {indicator.protocol}</li>
-				</ul>
-			</div>
-		</div> -->
 
 		<div class="logo-container">
 			<div class="text-content">
@@ -176,23 +161,7 @@
 			</div>
 		</div>
 
-		<!-- <h2 class="section">Protocol</h2> -->
-		<!-- <div class="report-meta">
-			<div class="meta-item">
-				<h3>Visit Date</h3>
-				<p>{indicator.visitDate}</p>
-			</div>
-			<div class="meta-item">
-				<h3>Site</h3>
-				<p>{indicator.site}</p>
-			</div>
-			<div class="meta-item">
-				<h3>Protocol</h3>
-				<p>{indicator.protocol}</p>
-			</div>
-		</div> -->
-
-		<h2 class="section">Subject Identifiers</h2>
+		<h2 class="section text-gray-800">Subject Identifiers</h2>
 		<div class="report-meta">
 			<div class="meta-item">
 				<h3>Subject Number</h3>
@@ -207,8 +176,94 @@
 				<p>{indicator.yearOfBirth} ({indicator.age})</p>
 			</div>
 			<div class="meta-item">
-				<h3>Sex)</h3>
+				<h3>Sex</h3>
 				<p>{indicator.sex}</p>
+			</div>
+		</div>
+		<br />
+		-------NEW---------
+		<div class="grid grid-cols-2 gap-8 rounded-lg bg-gray-50 p-4">
+			<div class="space-y-2">
+				<div class="flex gap-4">
+					<span class="w-24 font-medium text-gray-600">Print Date:</span>
+					<span>11/19/2024</span>
+				</div>
+				<div class="flex gap-4">
+					<span class="w-24 font-medium text-gray-600">Visit Date:</span>
+					<span>11/8/2024</span>
+				</div>
+			</div>
+			<div class="space-y-2">
+				<div class="flex gap-4">
+					<span class="w-24 font-medium text-gray-600">Site:</span>
+					<span>A-Shine</span>
+				</div>
+				<div class="flex gap-4">
+					<span class="w-24 font-medium text-gray-600">Protocol:</span>
+					<span>NMRA-335140-303</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Status Banner 2 -->
+		<div class="rounded-lg bg-white shadow-sm">
+			<div class="mb-6 flex items-center gap-2 rounded-md bg-red-500 p-4 text-white">
+				<div class="justify-left flex items-center gap-2">
+					<svelte:component this={iconMap[indicator.icon]} size={24} />
+					{indicator.status}
+				</div>
+			</div>
+
+			<div class="alert-description">
+				{#if indicator.icon === 'met'}
+					<p class="mb-4 text-gray-700">The participant has met the protocol specifications.</p>
+				{:else}
+					<p class="mb-4 text-gray-700">The following eligibility criteria have been flagged:</p>
+				{/if}
+			</div>
+			<div class="notes">
+				{#if indicator.flags && indicator.flags.length > 0}
+					<div class="space-y-2">
+						{#each indicator.flags as flag}
+							<div class="mt-5 flex items-center gap-2">
+								<FlagTriangleRight color={flag.color} />
+								<span>{flag.header}</span>
+							</div>
+						{/each}
+					</div>
+				{/if}
+
+				{#if indicator.nextSteps && indicator.nextSteps.length > 0}
+					<div class="mt-5">Next Steps:</div>
+					<div class="space-y-2">
+						{#each indicator.nextSteps as step}
+							<div class="flex items-start gap-2">
+								<CheckSquareIcon />
+								<p>{step.text}</p>
+							</div>
+						{/each}
+					</div>
+				{/if}
+			</div>
+		</div>
+
+		<h2 class="mb-2 flex justify-center align-middle text-xl text-gray-800">Subject Identifiers</h2>
+		<div class="grid grid-cols-4 gap-2 rounded-lg">
+			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
+				<div class="font-medium text-gray-600">Subject Number</div>
+				<div>4564564</div>
+			</div>
+			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
+				<div class="font-medium text-gray-600">Initials</div>
+				<div>B-B</div>
+			</div>
+			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
+				<div class="font-medium text-gray-600">Year of Birth (age)</div>
+				<div>{indicator.yearOfBirth} ({indicator.age})</div>
+			</div>
+			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
+				<div class="font-medium text-gray-600">Sex</div>
+				<div>{indicator.sex}</div>
 			</div>
 		</div>
 
@@ -309,6 +364,7 @@
 		font-size: 10pt;
 		border-width: 2px;
 		border-radius: 10px;
+		border-color: gray-50;
 	}
 
 	/* Print-specific refinements */

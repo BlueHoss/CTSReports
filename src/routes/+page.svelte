@@ -5,10 +5,12 @@
 		CircleX,
 		CheckSquareIcon,
 		FlagTriangleRight,
-		ArrowRight
+		ArrowLeft,
+		HeartPulse
 	} from 'lucide-svelte';
-	import data from '../data/indicators.json';
+	import data from './indicators3.json';
 	import './app.report.css';
+	import Report from './Report.svelte';
 
 	let activeIndicator: any = null;
 	let groupedIndicators = {};
@@ -72,6 +74,13 @@
 		>
 			<SquareCheck size={24} />
 		</button>
+		<a
+			href="/"
+			class="justify-left flex items-center rounded-lg p-2 transition-colors duration-200 hover:bg-gray-200"
+			rel="external"
+		>
+			V1 <ArrowLeft size={24} />
+		</a>
 	</div>
 
 	<!-- Indicator selection when group is active -->
@@ -96,138 +105,10 @@
 	<hr />
 	<hr />
 </div>
+
 {#if activeIndicator}
-	<div class="header">
-		<div class="justify-left flex items-center gap-2">
-			<img src="/logo.png" alt="CTSdatabase Logo" class="h-auto w-[100px]" />
-			<h1>CTSdatabase Match Report</h1>
-		</div>
-		<!-- <div class="status-banner denied"> -->
-		<div class={activeIndicator.color}>
-			<div class="justify-left flex items-center gap-2">
-				<svelte:component this={iconMap[activeIndicator.icon]} size={24} />
-				{activeIndicator.status.title}
-			</div>
-		</div>
-	</div>
-
-	<div class="status-summary approved">
-		<h2>{activeIndicator.title}</h2>
-		<p>
-			{activeIndicator.status.text}
-		</p>
-		<p>Status determined on: {activeIndicator.status.date}</p>
-	</div>
-
-	<!-- Flags -->
-	{#if activeIndicator.flags}
-		<div class="flags-section">
-			<h2 class="section">Flags</h2>
-
-			{#each activeIndicator.flags as flag}
-				<div class="justify-left flex items-center gap-2">
-					<FlagTriangleRight color={flag.color} size={24} />
-					<p>{flag.header}</p>
-				</div>
-			{/each}
-		</div>
-	{/if}
-
-	<!-- Next Steps -->
-	{#if activeIndicator.nextSteps}
-		<div class="flags-section">
-			<h2>Next Steps</h2>
-
-			{#each activeIndicator.nextSteps as step}
-				<div class="justify-left flex items-center gap-2">
-					<CheckSquareIcon size={24} />
-					<p>{step.text}</p>
-				</div>
-			{/each}
-		</div>
-	{/if}
-
-	<!-- Protocol -->
-	{#if activeIndicator.protocol}
-		<h2 class="section">Protocol</h2>
-		<div class="report-meta">
-			{#each activeIndicator.protocol as proto}
-				<div class="meta-item">
-					<h3>{proto.label}</h3>
-					<p>{proto.value}</p>
-				</div>
-			{/each}
-		</div>
-	{/if}
-
-	<!-- Subject -->
-	{#if activeIndicator.subject}
-		<h2 class="section">Subject Details</h2>
-		<div class="report-meta">
-			{#each activeIndicator.subject as sub}
-				<div class="meta-item">
-					<h3>{sub.label}</h3>
-					<p>{sub.value}</p>
-				</div>
-			{/each}
-		</div>
-	{/if}
-
-	<!-- Subject -->
-	{#if activeIndicator.match}
-		<h2 class="section">{activeIndicator.match.title}</h2>
-		<p>
-			{activeIndicator.match.subtitle}
-		</p>
-
-		{#if activeIndicator.match.matches}
-			<table class="w-full">
-				<thead>
-					<tr>
-						<th>Initial Visit</th>
-						<th>Indication</th>
-						<th>Last Status</th>
-						<th>Initials</th>
-						<th>YOB (Age)</th>
-						<th>Site Name</th>
-						<th>Site Zip</th>
-						<th>Site Phone</th>
-					</tr>
-				</thead>
-				<tbody>
-					{#each activeIndicator.match.matches as match}
-						<tr>
-							<td>{match.initialVisit}</td>
-							<td>{match.indication}</td>
-							<td>{match.lastStatus}</td>
-							<td>{match.initials}</td>
-							<td>{match.yob} ({match.age})</td>
-							<td>{match.siteName}</td>
-							<td>{match.siteZip}</td>
-							<td>{match.sitePhone}</td>
-						</tr>
-					{/each}
-				</tbody>
-			</table>
-		{/if}
-	{/if}
-
-	<div class="alert">
-		* Any statuses that are blank have not yet been reported to CTSdatabase. You may need to call
-		this site for more information.
-	</div>
-	<div class="footer">
-		<p>PS = Prescreen, EOT = End Of Treatment</p>
-		<p>
-			If any of above information is incorrect, please contact us at <a
-				href="mailto:support@ctsdatabase.com">support@ctsdatabase.com</a
-			> or 1-855 CTS-CTSd(1-855-287-2873)
-		</p>
-		<p>
-			Disclaimer: These are statistical estimates only. It is possible that a subject may be a
-			database match and yet not have participated in the studies described above.
-		</p>
-		<p>All dates and times are in GMT</p>
-		<p>Printed On: November 10, 2024 05:38:01 PM</p>
-	</div>
+	<Report indicator={activeIndicator} />
+{:else}
+	<hr />
+	<h1>Select an report</h1>
 {/if}
