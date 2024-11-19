@@ -19,6 +19,10 @@
         {
           "color": "#dc3545",
           "header": "Washout Violation: Active in MMDD Study"
+        },
+        {
+          "color": "#ffc107",
+          "header": "Potentially misreported identifiers: Last 4 of ID"
         }
       ]
     },

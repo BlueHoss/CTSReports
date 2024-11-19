@@ -65,11 +65,11 @@
 
 	function handleOnNoClicked() {
 		isDialogOpen.set(false);
-		setTimeout(() => window.print(), 100); // 300ms delay for dialog animation
+		setTimeout(() => window.print(), 500); // 300ms delay for dialog animation
 	}
 	function handleOnYesClicked() {
 		isDialogOpen.set(false);
-		setTimeout(() => window.print(), 100); // 300ms delay for dialog animation
+		setTimeout(() => window.print(), 500); // 300ms delay for dialog animation
 	}
 </script>
 
@@ -103,21 +103,21 @@
 			<div class="space-y-2">
 				<div class="flex gap-4">
 					<span class="w-24 text-gray-600">Print Date:</span>
-					<span>11/19/2024</span>
+					<span>{new Date().toLocaleDateString()}</span>
 				</div>
 				<div class="flex gap-4">
 					<span class="w-24 text-gray-600">Visit Date:</span>
-					<span>11/8/2024</span>
+					<span>{indicator.visitDate}</span>
 				</div>
 			</div>
 			<div class="space-y-2">
 				<div class="flex gap-4">
 					<span class="w-24 text-gray-600">Site:</span>
-					<span>A-Shine</span>
+					<span>{indicator.site}</span>
 				</div>
 				<div class="flex gap-4">
 					<span class="w-24 text-gray-600">Protocol:</span>
-					<span>NMRA-335140-303</span>
+					<span>{indicator.protocol}</span>
 				</div>
 			</div>
 		</div>
@@ -170,11 +170,11 @@
 		<div class="grid grid-cols-4 gap-2 rounded-lg">
 			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
 				<div class=" text-gray-600">Subject Number</div>
-				<div>4564564</div>
+				<div>{indicator.subjectId}</div>
 			</div>
 			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
 				<div class=" text-gray-600">Initials</div>
-				<div>B-B</div>
+				<div>{indicator.initials}</div>
 			</div>
 			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
 				<div class=" text-gray-600">Year of Birth (age)</div>
