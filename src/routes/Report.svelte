@@ -1,22 +1,6 @@
 <script lang="ts">
-	import {
-		CircleX,
-		Flag,
-		FlagTriangleRight,
-		ArrowRight,
-		SquareCheck,
-		CheckSquareIcon,
-		Printer
-	} from 'lucide-svelte';
+	import { FlagTriangleRight, CheckSquareIcon, Printer } from 'lucide-svelte';
 	import ScreenFail from './_screenFail.svelte';
-
-	import StatusNotMet from './StatusNotMet.svelte';
-
-	const iconMap = {
-		met: SquareCheck,
-		notmet: CircleX,
-		investigate: Flag
-	};
 
 	export let indicator: {
 		id: string;
@@ -47,11 +31,10 @@
 		];
 	};
 
-	// Create a store to control dialog visibility
 	import { writable } from 'svelte/store';
 	import Button from '$lib/components/ui/button/button.svelte';
-	import V3parts from './_v3parts.svelte';
 	import StatusInvestigate from './StatusInvestigate.svelte';
+	import StatusNotMet from './StatusNotMet.svelte';
 	import StatusMet from './StatusMet.svelte';
 	export const isDialogOpen = writable(false);
 
@@ -69,11 +52,11 @@
 
 	function handleOnNoClicked() {
 		isDialogOpen.set(false);
-		setTimeout(() => window.print(), 500); // 300ms delay for dialog animation
+		setTimeout(() => window.print(), 500);
 	}
 	function handleOnYesClicked() {
 		isDialogOpen.set(false);
-		setTimeout(() => window.print(), 500); // 300ms delay for dialog animation
+		setTimeout(() => window.print(), 500);
 	}
 </script>
 

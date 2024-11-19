@@ -1,13 +1,5 @@
 <script lang="ts">
-	import {
-		SquareCheck,
-		Flag,
-		CircleX,
-		CheckSquareIcon,
-		FlagTriangleRight,
-		ArrowLeft,
-		HeartPulse
-	} from 'lucide-svelte';
+	import { SquareCheck, Flag, CircleX } from 'lucide-svelte';
 	import data from './indicators3.json';
 	import './app.report.css';
 	import Report from './Report.svelte';
@@ -38,13 +30,6 @@
 	function setIndicator(id) {
 		activeIndicator = data.indicators.find((ind) => ind.id === id);
 	}
-
-	// Map icon names to components
-	const iconMap = {
-		met: SquareCheck,
-		notmet: CircleX,
-		investigate: Flag
-	};
 </script>
 
 <div class="flex flex-col print:hidden">
@@ -74,13 +59,6 @@
 		>
 			<SquareCheck size={24} />
 		</button>
-		<a
-			href="/"
-			class="justify-left flex items-center rounded-lg p-2 transition-colors duration-200 hover:bg-gray-200"
-			rel="external"
-		>
-			V1 <ArrowLeft size={24} />
-		</a>
 	</div>
 
 	<!-- Indicator selection when group is active -->
@@ -110,5 +88,5 @@
 	<Report indicator={activeIndicator} />
 {:else}
 	<hr />
-	<h1>Select an report</h1>
+	<div class="border-1 m-5 p-5">Select an report above.</div>
 {/if}
