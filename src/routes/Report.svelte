@@ -84,23 +84,23 @@
 			</div>
 		</div>
 
-		<div class="grid grid-cols-2 gap-8 rounded-lg bg-gray-50 p-4">
-			<div class="space-y-2">
-				<div class="flex gap-4">
+		<div class="grid grid-cols-2 gap-8 rounded-lg bg-gray-100 p-4">
+			<div class="space-y-1">
+				<div class="flex">
 					<span class="w-24 text-gray-600">Print Date:</span>
 					<span>{new Date().toLocaleDateString()}</span>
 				</div>
-				<div class="flex gap-4">
+				<div class="flex">
 					<span class="w-24 text-gray-600">Visit Date:</span>
 					<span>{indicator.visitDate}</span>
 				</div>
 			</div>
-			<div class="space-y-2">
-				<div class="flex gap-4">
+			<div class="space-y-1">
+				<div class="flex">
 					<span class="w-24 text-gray-600">Site:</span>
 					<span>{indicator.site}</span>
 				</div>
-				<div class="flex gap-4">
+				<div class="flex">
 					<span class="w-24 text-gray-600">Protocol:</span>
 					<span>{indicator.protocol}</span>
 				</div>
@@ -152,27 +152,27 @@
 
 		<h2 class="mb-2 flex justify-center align-middle text-xl text-gray-800">Subject Identifiers</h2>
 		<div class="grid grid-cols-4 gap-2 rounded-lg">
-			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
+			<div class="flex flex-col rounded-lg bg-gray-100 p-2">
 				<div class=" text-gray-600">Subject Number</div>
 				<div>{indicator.subjectId}</div>
 			</div>
-			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
+			<div class="flex flex-col rounded-lg bg-gray-100 p-2">
 				<div class=" text-gray-600">Initials</div>
 				<div>{indicator.initials}</div>
 			</div>
-			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
+			<div class="flex flex-col rounded-lg bg-gray-100 p-2">
 				<div class=" text-gray-600">Year of Birth (age)</div>
 				<div>{indicator.yearOfBirth} ({indicator.age})</div>
 			</div>
-			<div class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
+			<div class="flex flex-col rounded-lg bg-gray-100 p-2">
 				<div class=" text-gray-600">Sex</div>
 				<div>{indicator.sex}</div>
 			</div>
 		</div>
 
-		<img src="/certainmatches.png" alt="Virtual Certain" class="w-full" />
-
-		<img src="/probablematches.png" alt="Probable Matches" class="w-full" />
+		{#if indicator.icon !== 'met'}
+			<img src="/matches.png" alt="Virtual Certain" class="w-full" />
+		{/if}
 
 		<!-- Footer -->
 		<div class="space-y-2 border-t border-gray-200 pt-4 text-sm text-gray-600">

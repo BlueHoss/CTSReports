@@ -24,6 +24,7 @@
 
 	function setGroup(group) {
 		activeGroup = group;
+		//setIndicator(activeGroup[group][0].id);
 		activeIndicator = null; // Reset active indicator when changing groups
 	}
 
