@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { SquareCheck } from 'lucide-svelte';
-	export let status: string;
+	export let indicator;
 </script>
 
 <div
@@ -8,6 +8,10 @@
 >
 	<div class="justify-left flex items-center gap-2">
 		<SquareCheck size={24} />
-		{status}
+		{indicator.status}
 	</div>
 </div>
+
+<p class="center mb-4 text-center text-xl text-gray-600">
+	Subject meets CTS screening criteria. Proceed with screening.
+</p>

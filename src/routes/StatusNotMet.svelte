@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { CircleX } from 'lucide-svelte';
-	export let status: string;
+	export let indicator;
 </script>
 
 <div
@@ -8,6 +8,9 @@
 >
 	<div class="justify-left flex items-center gap-2">
 		<CircleX size={24} />
-		{status}
+		{indicator.status}
 	</div>
 </div>
+<p class="center mb-4 text-center text-xl text-gray-600">
+	Subject does not meet CTS screening criteria
+</p>

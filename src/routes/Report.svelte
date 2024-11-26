@@ -110,11 +110,11 @@
 		<!-- Status Banner 2 -->
 		<div class="rounded-lg bg-white">
 			{#if indicator.icon === 'met'}
-				<StatusMet status={indicator.status} />
+				<StatusMet {indicator} />
 			{:else if indicator.icon === 'notmet'}
-				<StatusNotMet status={indicator.status} />
+				<StatusNotMet {indicator} />
 			{:else}
-				<StatusInvestigate status={indicator.status} />
+				<StatusInvestigate {indicator} />
 			{/if}
 
 			<div class="alert-description">
@@ -176,6 +176,7 @@
 
 		<!-- Footer -->
 		<div class="space-y-2 border-t border-gray-200 pt-4 text-sm text-gray-600">
+			<p>* replys will be within 1 hour of receiving the report during normal business hours.</p>
 			<p>PS = Prescreen, EOT = End Of Treatment</p>
 			<p>
 				If any of above information is incorrect, please contact us at

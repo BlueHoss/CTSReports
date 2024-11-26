@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Flag } from 'lucide-svelte';
-	export let status: string;
+	export let indicator;
 </script>
 
 <div
@@ -8,6 +8,17 @@
 >
 	<div class="justify-left flex items-center gap-2">
 		<Flag size={24} />
-		{status}
+		{indicator.status}
 	</div>
 </div>
+{#if !indicator.investigationStatus}
+	<p class="mb-4 text-gray-600"></p>
+{:else if indicator.investigationStatus === 'Site'}
+	<p class="mb-4 text-center text-xl text-gray-600">
+		Site investigation required. Please investigate....
+	</p>
+{:else if indicator.investigationStatus === 'CTS'}
+	<p class="mb-4 text-center text-xl text-gray-600">
+		CTS investigation required. You will receive a reply back very soon.*
+	</p>
+{/if}
