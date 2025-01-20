@@ -11,6 +11,3 @@
 		{indicator.status}
 	</div>
 </div>
-<p class="center mb-4 text-center text-lg text-gray-600">
-	Subject does not meet CTS screening criteria
-</p>

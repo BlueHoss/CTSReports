@@ -11,7 +11,7 @@
 		{indicator.status}
 	</div>
 </div>
-{#if !indicator.investigationStatus}
+<!-- {#if !indicator.investigationStatus}
 	<p class="mb-4 text-gray-600"></p>
 {:else if indicator.investigationStatus === 'Site'}
 	<p class="mb-4 text-center text-lg text-gray-600">
@@ -21,4 +21,4 @@
 	<p class="mb-4 text-center text-lg text-gray-600">
 		CTS investigation required. You will receive a reply back very soon.*
 	</p>
-{/if}
+{/if} -->

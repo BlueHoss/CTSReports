@@ -151,7 +151,7 @@
 		</div>
 
 		<h2 class="flex justify-center align-middle text-lg text-gray-600">Subject Identifiers</h2>
-		<div class="-mt-2 grid grid-cols-4 gap-2 rounded-lg">
+		<div class="important! -mt-8 grid grid-cols-4 gap-2 rounded-lg">
 			<div class="flex flex-col rounded-lg bg-gray-100 p-2">
 				<div class=" text-gray-600">Subject Number</div>
 				<div>{indicator.subjectId}</div>
@@ -175,8 +175,7 @@
 		{/if}
 
 		<!-- Footer -->
-		<div class="space-y-2 border-t border-gray-200 pt-4 text-sm text-gray-600">
-			<p>* replys will be within 1 hour of receiving the report during normal business hours.</p>
+		<div class="space-y-2 border-t border-gray-200 pt-4 text-xs text-gray-600">
 			<p>PS = Prescreen, EOT = End Of Treatment</p>
 			<p>
 				If any of above information is incorrect, please contact us at
